@@ -13,5 +13,11 @@ public class Main {
         System.out.println(lazy);
         lazy = SingletonLazy.getInstance();
         System.out.println(lazy);
+
+        System.out.println("\n=== Singleton Preguiçoso Thread Safe (Lazy Holder) ===");
+        SingletonLazyHolder holder = SingletonLazyHolder.getInstance();
+        System.out.println(holder);
+        holder = SingletonLazyHolder.getInstance();
+        System.out.println(holder);
     }
 }
