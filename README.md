@@ -46,3 +46,62 @@ public static SingletonLazyHolder getInstance() {
     return InstanceHolder.instance;
 }
 ```
+
+### Strategy
+
+O padrão Strategy tem por objetivo simplificar a variação de algoritmos para solucionar um mesmo problema.
+
+Para tornar o aprendizado mais simples, implementei esse padrão utilizando um estilo de jogo de RPG. Um personagem possui diferentes estratégias de ataque para escolher.
+
+**Funciona da seguinte maneira:**
+
+1. Uma interface possui métodos para serem implementados (Attack).
+
+```java
+// Interface Attack
+void attack();
+```
+
+2. Outras classes irão implementar essa interface, cada uma aplicando uma estratégia diferente (SwordAttack, BowAttack e MagicAttack).
+
+```java
+// Classe SwordAttack
+@Override
+public void attack() {
+    System.out.println("Swing the sword!");
+}
+```
+
+3. A classe de contexto (Character) mantém uma referência para a interface da estratégia (Attack).
+
+```java
+// Classe Character
+private Attack attackStrategy; // Referência para o tipo do ataque
+
+public void setAttackStrategy(Attack attackStrategy) {
+    this.attackStrategy = attackStrategy; // Mudança de estratégia
+}
+
+public void attack() {
+    attackStrategy.attack(); // Realiza o ataque atual
+}
+```
+
+4. O jogador agora pode ter diferentes tipos de ataque durante seu combate:
+
+```java
+Attack swordAtk = new SwordAttack();
+Attack bowAtk = new BowAttack();
+Attack magicAtk = new MagicAttack();
+
+Character player = new Character();
+
+player.setAttackStrategy(swordAtk);
+player.attack(); // Swing the sword!
+
+player.setAttackStrategy(bowAtk);
+player.attack(); // Shoot arrows!
+
+player.setAttackStrategy(magicAtk);
+player.attack(); // Cast spell!
+```
