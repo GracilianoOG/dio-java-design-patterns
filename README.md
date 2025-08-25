@@ -13,10 +13,6 @@ A instância do singleton é criada assim que a propriedade estática é definid
 ```java
 private static final SingletonEager instance = new SingletonEager();
 
-private SingletonEager() {
-    super();
-}
-
 public static SingletonEager getInstance() {
     return instance;
 }
@@ -29,10 +25,6 @@ Nessa versão, a instância é gerada na primeira execução do getter. Após is
 ```java
 private static SingletonLazy instance;
 
-private SingletonLazy() {
-    super();
-}
-
 public static SingletonLazy getInstance() {
     if(instance == null) {
         instance = new SingletonLazy();
@@ -43,13 +35,11 @@ public static SingletonLazy getInstance() {
 
 #### Lazy Holder Singleton
 
+Esta versão inclui uma série de benefícios por ser `lazy loaded` e `thread safe`. De acordo com [um post do stackoverflow](https://stackoverflow.com/questions/15019306/regarding-static-holder-singleton-pattern/24018148#24018148), a inicialização da classe é deferida até que ela seja usada de fato.
+
 ```java
 private static class InstanceHolder {
     public static SingletonLazyHolder instance = new SingletonLazyHolder();
-}
-
-private SingletonLazyHolder() {
-    super();
 }
 
 public static SingletonLazyHolder getInstance() {
