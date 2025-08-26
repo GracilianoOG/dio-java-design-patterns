@@ -125,3 +125,9 @@ Sendo assim, com a implementação do padrão de projeto `Facade` no projeto, si
 Engine engine = new Engine();
 engine.startGame(); // Método que utiliza de outros subsistemas
 ```
+
+## 🧑🏻‍💻 Author
+
+| [<img src="https://avatars.githubusercontent.com/u/72778164?s=96&v=4"><br><sub>GracilianoOG</sub>](https://github.com/GracilianoOG) |
+| :---------------------------------------------------------------------------------------------------------------------------------: |
+|                                       [Linkedin](https://www.linkedin.com/in/gabrielgmbarros)                                       |
