@@ -1,5 +1,17 @@
 # 📑 Padrões de Projeto
 
+## 📖 Descrição
+
+Existem diversos padrões de projeto para melhorar o processo de desenvolvimento de sistemas. O livro _Design Patterns: Elements of Reusable Object-Oriented Software_ dos autores _Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides_ deu origem ao famoso "GoF", que significa _Gang of Four_, fazendo referência aos quatro escritores do livro.
+
+Os padrões de design estão separados em três principais categoriais:
+
+- **Padrões Criacionais**: Abstract Factory, Builder, Factory Method, Prototype, Singleton.
+- **Padrões Comportamentais**: Chain of Responsibility, Iterator, Observer, Strategy, Template Method.
+- **Padrões Estruturais**: Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy.
+
+Este repositório será utilizado não apenas para entregar o desafio, mas para me aprofundar nesses padrões utilizando a linguagem Java como base. Além dos exemplos em código, estarei documentando cada padrão implementado no README.
+
 ## 🎯 Padrões aplicados
 
 ### 📌 Singleton
