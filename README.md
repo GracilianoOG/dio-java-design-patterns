@@ -105,3 +105,23 @@ player.attack(); // Shoot arrows!
 player.setAttackStrategy(magicAtk);
 player.attack(); // Cast spell!
 ```
+
+### Facade
+
+O design pattern `Facade` é utilizado para simplificar o uso de diferentes interfaces em uma interface comum e simples de se utilizar. É inclusive algo que já fiz enquanto desenvolvia um jogo sem nem mesmo entender o que era.
+
+No exemplo desenvolvido, utilizei a ideia de uma engine fake de um jogo qualquer. A classe `Engine` abstrai a complexidade de se utilizar as outras classes individualmente. Por exemplo, o método `startGame()` inicia a música, ativa os _listeners_ de entrada (poderia ser do teclado, mouse, etc) e checa por colisões.
+
+```java
+System.out.println("Starting game...");
+this.audioManager.playMusic();
+this.inputManager.listen();
+this.collisionManager.detectCollision();
+```
+
+Sendo assim, com a implementação do padrão de projeto `Facade` no projeto, simplifica-se a utilização e integração dos subsistemas em uma interface mais amigável de se trabalhar.
+
+```java
+Engine engine = new Engine();
+engine.startGame(); // Método que utiliza de outros subsistemas
+```
