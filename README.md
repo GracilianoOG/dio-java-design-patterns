@@ -1,8 +1,8 @@
-# Padrões de Projeto
+# 📑 Padrões de Projeto
 
-## Padrões aplicados
+## 🎯 Padrões aplicados
 
-### Singleton
+### 📌 Singleton
 
 Esse padrão de projeto consiste em uma classe que garanta apenas uma única instância durante a execução do programa. Caso a classe tente ser instanciada novamente, a instância já criada será retornada.
 
@@ -47,7 +47,7 @@ public static SingletonLazyHolder getInstance() {
 }
 ```
 
-### Strategy
+### 📌 Strategy
 
 O padrão Strategy tem por objetivo simplificar a variação de algoritmos para solucionar um mesmo problema.
 
@@ -106,7 +106,7 @@ player.setAttackStrategy(magicAtk);
 player.attack(); // Cast spell!
 ```
 
-### Facade
+### 📌 Facade
 
 O design pattern `Facade` é utilizado para simplificar o uso de diferentes interfaces em uma interface comum e simples de se utilizar. É inclusive algo que já fiz enquanto desenvolvia um jogo sem nem mesmo entender o que era.
 
